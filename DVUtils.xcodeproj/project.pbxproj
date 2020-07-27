@@ -50,6 +50,11 @@
 		F532989024CF0F24007482FA /* UIView+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532988F24CF0F24007482FA /* UIView+Extra.swift */; };
 		F532989224CF0FFB007482FA /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532989124CF0FFB007482FA /* Reusable.swift */; };
 		F532989424CF1074007482FA /* UIWindow+VisibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532989324CF1074007482FA /* UIWindow+VisibleViewController.swift */; };
+		F532989E24CF1408007482FA /* DVCustomUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F532989C24CF1408007482FA /* DVCustomUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F53298A424CF14D2007482FA /* DVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298A324CF14D2007482FA /* DVStackView.swift */; };
+		F53298A724CF182D007482FA /* DVScrollStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298A624CF182D007482FA /* DVScrollStackView.swift */; };
+		F53298AA24CF1956007482FA /* DVAnimationKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298A924CF1956007482FA /* DVAnimationKeyType.swift */; };
+		F53298AC24CF1964007482FA /* DVAnimationMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53298AB24CF1964007482FA /* DVAnimationMaker.swift */; };
 		F5C3460024CEB8880074F8EF /* DVDebugLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C345F624CEB8830074F8EF /* DVDebugLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -107,6 +112,13 @@
 		F532988F24CF0F24007482FA /* UIView+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extra.swift"; sourceTree = "<group>"; };
 		F532989124CF0FFB007482FA /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		F532989324CF1074007482FA /* UIWindow+VisibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+VisibleViewController.swift"; sourceTree = "<group>"; };
+		F532989A24CF1408007482FA /* DVCustomUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DVCustomUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F532989C24CF1408007482FA /* DVCustomUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVCustomUI.h; sourceTree = "<group>"; };
+		F532989D24CF1408007482FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F53298A324CF14D2007482FA /* DVStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVStackView.swift; sourceTree = "<group>"; };
+		F53298A624CF182D007482FA /* DVScrollStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVScrollStackView.swift; sourceTree = "<group>"; };
+		F53298A924CF1956007482FA /* DVAnimationKeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVAnimationKeyType.swift; sourceTree = "<group>"; };
+		F53298AB24CF1964007482FA /* DVAnimationMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVAnimationMaker.swift; sourceTree = "<group>"; };
 		F5C345F624CEB8830074F8EF /* DVDebugLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVDebugLogger.h; sourceTree = "<group>"; };
 		F5C345F724CEB8830074F8EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C3460724CEB8880074F8EF /* DVDebugLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DVDebugLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +138,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				16AB9853B82DA9CDB8CC2BAC /* Pods_Extensions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F532989724CF1408007482FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,12 +289,50 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		F532989B24CF1408007482FA /* DVCustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				F53298A824CF1940007482FA /* DVAnimationMaker */,
+				F53298A524CF181B007482FA /* DVScrollStackView */,
+				F53298A224CF1425007482FA /* DVStackView */,
+				F532989C24CF1408007482FA /* DVCustomUI.h */,
+				F532989D24CF1408007482FA /* Info.plist */,
+			);
+			path = DVCustomUI;
+			sourceTree = "<group>";
+		};
+		F53298A224CF1425007482FA /* DVStackView */ = {
+			isa = PBXGroup;
+			children = (
+				F53298A324CF14D2007482FA /* DVStackView.swift */,
+			);
+			path = DVStackView;
+			sourceTree = "<group>";
+		};
+		F53298A524CF181B007482FA /* DVScrollStackView */ = {
+			isa = PBXGroup;
+			children = (
+				F53298A624CF182D007482FA /* DVScrollStackView.swift */,
+			);
+			path = DVScrollStackView;
+			sourceTree = "<group>";
+		};
+		F53298A824CF1940007482FA /* DVAnimationMaker */ = {
+			isa = PBXGroup;
+			children = (
+				F53298A924CF1956007482FA /* DVAnimationKeyType.swift */,
+				F53298AB24CF1964007482FA /* DVAnimationMaker.swift */,
+			);
+			path = DVAnimationMaker;
+			sourceTree = "<group>";
+		};
 		F5C345E924CEB8830074F8EF = {
 			isa = PBXGroup;
 			children = (
 				F5C345F524CEB8830074F8EF /* DVDebugLogger */,
 				F532982424CECD60007482FA /* DVLayout */,
 				F532984E24CEF608007482FA /* Extensions */,
+				F532989B24CF1408007482FA /* DVCustomUI */,
 				F5C345F424CEB8830074F8EF /* Products */,
 				3C889C593B1E625FCF9A2FF1 /* Pods */,
 				397D1BC223AD307C1469193C /* Frameworks */,
@@ -288,6 +345,7 @@
 				F5C3460724CEB8880074F8EF /* DVDebugLogger.framework */,
 				F532982324CECD60007482FA /* DVLayout.framework */,
 				F532984D24CEF608007482FA /* Extensions.framework */,
+				F532989A24CF1408007482FA /* DVCustomUI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,6 +380,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F532985124CEF608007482FA /* Extensions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F532989524CF1408007482FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F532989E24CF1408007482FA /* DVCustomUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +440,24 @@
 			productReference = F532984D24CEF608007482FA /* Extensions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F532989924CF1408007482FA /* DVCustomUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F532989F24CF1408007482FA /* Build configuration list for PBXNativeTarget "DVCustomUI" */;
+			buildPhases = (
+				F532989524CF1408007482FA /* Headers */,
+				F532989624CF1408007482FA /* Sources */,
+				F532989724CF1408007482FA /* Frameworks */,
+				F532989824CF1408007482FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DVCustomUI;
+			productName = DVCustomUI;
+			productReference = F532989A24CF1408007482FA /* DVCustomUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		F5C345FE24CEB8880074F8EF /* DVDebugLogger */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5C3460424CEB8880074F8EF /* Build configuration list for PBXNativeTarget "DVDebugLogger" */;
@@ -410,6 +494,10 @@
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
 					};
+					F532989924CF1408007482FA = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
 					F5C345FE24CEB8880074F8EF = {
 						LastSwiftMigration = 1120;
 					};
@@ -431,6 +519,7 @@
 				F5C345FE24CEB8880074F8EF /* DVDebugLogger */,
 				F532982224CECD60007482FA /* DVLayout */,
 				F532984C24CEF608007482FA /* Extensions */,
+				F532989924CF1408007482FA /* DVCustomUI */,
 			);
 		};
 /* End PBXProject section */
@@ -444,6 +533,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F532984B24CEF608007482FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F532989824CF1408007482FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -573,6 +669,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F532989624CF1408007482FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F53298AA24CF1956007482FA /* DVAnimationKeyType.swift in Sources */,
+				F53298A724CF182D007482FA /* DVScrollStackView.swift in Sources */,
+				F53298A424CF14D2007482FA /* DVStackView.swift in Sources */,
+				F53298AC24CF1964007482FA /* DVAnimationMaker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F5C3460124CEB8880074F8EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -694,6 +801,59 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvcomp.Extensions;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F53298A024CF1408007482FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QH3XGD28XC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DVCustomUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvcomp.DVCustomUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F53298A124CF1408007482FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QH3XGD28XC;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DVCustomUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dvcomp.DVCustomUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -895,6 +1055,15 @@
 			buildConfigurations = (
 				F532985324CEF608007482FA /* Debug */,
 				F532985424CEF608007482FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F532989F24CF1408007482FA /* Build configuration list for PBXNativeTarget "DVCustomUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F53298A024CF1408007482FA /* Debug */,
+				F53298A124CF1408007482FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
