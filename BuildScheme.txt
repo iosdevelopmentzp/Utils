@@ -3,18 +3,39 @@
 
 xcodebuild archive \
     -scheme DVDebugLogger \
-    -archivePath "***path***/build/ios.xcarchive" \
+    -archivePath "***path***/build/DVDebugLogger/ios.xcarchive" \
     -sdk iphoneos \
     SKIP_INSTALL=NO
 
 
 xcodebuild archive \
     -scheme DVDebugLogger \
-    -archivePath "***path***/build/ios_sim.xcarchive" \
+    -archivePath "***path***/build/DVDebugLogger/ios_sim.xcarchive" \
     -sdk iphonesimulator \
     SKIP_INSTALL=NO
 
     xcodebuild -create-xcframework \
-    -framework "***path***/build/ios.xcarchive/Products/Library/Frameworks/DVDebugLogger.framework" \
-    -framework "***path***/build/ios_sim.xcarchive/Products/Library/Frameworks/DVDebugLogger.framework" \
-    -output "***path***/build/DVDebugLogger.xcframework"
+    -framework "***path***/build/DVDebugLogger/ios.xcarchive/Products/Library/Frameworks/DVDebugLogger.framework" \
+    -framework "***path***/build/DVDebugLogger/ios_sim.xcarchive/Products/Library/Frameworks/DVDebugLogger.framework" \
+    -output "***path***/build/DVDebugLogger/DVDebugLogger.xcframework"
+
+
+    // MARK: - DVLayout
+
+    xcodebuild archive \
+    -scheme DVLayout \
+    -archivePath "***path***/build/DVLayout/ios.xcarchive" \
+    -sdk iphoneos \
+    SKIP_INSTALL=NO
+
+
+	xcodebuild archive \
+    -scheme DVLayout \
+    -archivePath "***path***/build/DVLayout/ios_sim.xcarchive" \
+    -sdk iphonesimulator \
+    SKIP_INSTALL=NO
+
+    xcodebuild -create-xcframework \
+    -framework "***path***/build/DVLayout/ios.xcarchive/Products/Library/Frameworks/DVLayout.framework" \
+    -framework "***path***/build/DVLayout/ios_sim.xcarchive/Products/Library/Frameworks/DVLayout.framework" \
+    -output "***path***/build/DVLayout/DVLayout.xcframework"
