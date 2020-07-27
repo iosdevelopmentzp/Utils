@@ -1,0 +1,20 @@
+
+// MARK: -  DVDebugLogger
+
+xcodebuild archive \
+    -scheme DVDebugLogger \
+    -archivePath "***path***/build/ios.xcarchive" \
+    -sdk iphoneos \
+    SKIP_INSTALL=NO
+
+
+xcodebuild archive \
+    -scheme DVDebugLogger \
+    -archivePath "***path***/build/ios_sim.xcarchive" \
+    -sdk iphonesimulator \
+    SKIP_INSTALL=NO
+
+    xcodebuild -create-xcframework \
+    -framework "***path***/build/ios.xcarchive/Products/Library/Frameworks/DVDebugLogger.framework" \
+    -framework "***path***/build/ios_sim.xcarchive/Products/Library/Frameworks/DVDebugLogger.framework" \
+    -output "***path***/build/DVDebugLogger.xcframework"
