@@ -325,7 +325,7 @@ public struct Layout {
         let superview = safeSuperview()
         let constraint: NSLayoutConstraint
         if #available(iOS 11.0, *) {
-            constraint = element.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor, constant: constant)
+            constraint = element.bottomAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.bottomAnchor, constant: constant)
         } else {
             var parentViewController: UIViewController? = superview.findViewController()
             
@@ -334,7 +334,7 @@ public struct Layout {
             }
             
             let bottomPin = parentViewController?.bottomLayoutGuide.topAnchor ?? superview.bottomAnchor
-            constraint = element.topAnchor.constraint(equalTo: bottomPin, constant: constant)
+            constraint = element.bottomAnchor.constraint(equalTo: bottomPin, constant: constant)
         }
         constraint.isActive = true
         return constraint
